@@ -71,7 +71,7 @@
 - **Development responsibility:** Option 1 (Mosaic), Option 2 (minimal), Option 3 (Factbird)
 - **Hardware requirements:** Option 1 (none), Option 2 (new devices), Option 3 (none)
 - **Complexity level:** Option 1 (medium), Option 2 (low), Option 3 (high)
-
+- **Timeline risk:** Option 1 (dependent on external development), Option 2 (immediate deployment possible), Option 3 (dependent on internal development)
 ---
 
 # Prusa
@@ -84,6 +84,7 @@
 - Custom development required to convert 10-second image snapshots into continuous video streams
 - Image stitching process creates artificial video from static snapshots
 - All integration and data processing happens in the cloud
+- **Note:** Prusa's data messaging integration is not yet developed, adding additional complexity and timeline dependency
 
 **Benefits:**
 - No new hardware at your facilities
@@ -92,8 +93,10 @@
 
 **Considerations:**
 - Requires custom development by Factbird for image-to-video conversion
+- Dependent on Prusa completing their data messaging integration first
 - Video quality limited by 10-second snapshot intervals
 - Ongoing maintenance responsibility for integration software
+- Timeline dependent on both Factbird and Prusa development schedules
 - Dependent on Prusa's cloud platform availability and changes
 
 ![Prusa - Option 1](Prusa_option_1.svg)
@@ -132,3 +135,4 @@ Both options face the same limitation of working with 10-second image snapshots 
 - **Development responsibility:** Option 1 (Factbird), Option 2 (minimal - uses existing products)
 - **Hardware requirements:** Option 1 (none), Option 2 (new devices per printer)
 - **Complexity level:** Option 1 (medium), Option 2 (low)
+- **Timeline risk:** Option 1 (dependent on external development), Option 2 (immediate deployment possible)
