@@ -1,0 +1,125 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f8f9fa"/>
+
+  <!-- On-Premise section -->
+  <rect x="50" y="50" width="1100" height="200" rx="10" fill="#f5f5f5" stroke="#757575" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="600" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#757575">On-Premise</text>
+
+  <!-- 3D Printer -->
+  <rect x="200" y="100" width="200" height="120" rx="8" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+  <text x="300" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4caf50">3D Printer</text>
+  <text x="300" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">EXISTING</text>
+
+  <!-- Factbird EDGE -->
+  <rect x="600" y="100" width="200" height="120" rx="8" fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
+  <text x="700" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2196f3">Factbird EDGE</text>
+  <text x="700" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2196f3">(PrusaLink Client)</text>
+  <text x="700" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">EXISTING</text>
+
+  <!-- Cloud A - Prusa -->
+  <rect x="50" y="300" width="550" height="450" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="350" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1976d2">Prusa Cloud</text>
+
+  <!-- Prusa Components -->
+
+  <!-- Prusa Applications -->
+  <rect x="200" y="500" width="200" height="80" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+  <text x="300" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9c27b0">Prusa Applications</text>
+  <text x="300" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9c27b0">PrusaConnect</text>
+  <text x="300" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">EXISTING</text>
+
+  <!-- Cloud B - Factbird -->
+  <rect x="650" y="300" width="500" height="450" rx="10" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="870" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#7b1fa2">Factbird (AWS)</text>
+
+  <!-- Factbird Components -->
+  <!-- KVS Storage -->
+  <rect x="700" y="360" width="180" height="80" rx="5" fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
+  <text x="790" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2196f3">KVS Storage</text>
+  <text x="790" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2196f3">Video Storage</text>
+  <text x="790" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">EXISTING</text>
+
+  <!-- AWS IoT Core Factbird -->
+  <rect x="920" y="360" width="180" height="80" rx="5" fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
+  <text x="1010" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2196f3">AWS IoT Core</text>
+  <text x="1010" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2196f3">MQTT Broker</text>
+  <text x="1010" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">EXISTING</text>
+
+  <!-- Factbird Applications -->
+  <rect x="750" y="500" width="300" height="80" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+  <text x="900" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9c27b0">Factbird Applications</text>
+  <text x="900" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9c27b0">Video Analytics + MQTT Processing</text>
+  <text x="900" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">EXISTING</text>
+
+  <!-- Connection Lines -->
+  <!-- Printer to Prusa Images (existing flow) -->
+  <path d="M 300 220 Q 250 460 250 500" stroke="#4caf50" stroke-width="3" fill="none" marker-end="url(#arrowgreen)"/>
+  <text x="300" y="290" font-family="Arial, sans-serif" font-size="11" fill="#4caf50" font-weight="bold">Images + Data (PrusaConnect)</text>
+
+  <!-- Printer to Factbird EDGE via LAN -->
+  <path d="M 400 160 L 600 160" stroke="#2196f3" stroke-width="4" fill="none" marker-end="url(#arrowblue)"/>
+  <text x="450" y="150" font-family="Arial, sans-serif" font-size="11" fill="#2196f3" font-weight="bold">Data (PrusaLink)</text>
+
+  <!-- Factbird EDGE to Factbird KVS -->
+  <path d="M 700 220 Q 750 270 790 360" stroke="#2196f3" stroke-width="4" fill="none" marker-end="url(#arrowblue)"/>
+  <text x="670" y="290" font-family="Arial, sans-serif" font-size="11" fill="#2196f3" font-weight="bold">Video Stream</text>
+
+  <!-- Factbird EDGE to Factbird MQTT -->
+  <path d="M 750 220 Q 900 270 1010 360" stroke="#2196f3" stroke-width="4" fill="none" marker-end="url(#arrowblue)"/>
+  <text x="920" y="290" font-family="Arial, sans-serif" font-size="11" fill="#2196f3" font-weight="bold">MQTT Data</text>
+
+  <!-- Factbird internal flows -->
+  <path d="M 790 440 Q 850 460 870 500" stroke="#9c27b0" stroke-width="3" fill="none" marker-end="url(#arrowpurple)"/>
+  <path d="M 1010 440 Q 950 460 930 500" stroke="#9c27b0" stroke-width="3" fill="none" marker-end="url(#arrowpurple)"/>
+
+  <!-- Legend -->
+
+  <rect x="950" y="30" width="220" height="100" rx="5" fill="#fff" stroke="#666" stroke-width="1"/>
+  <text x="1035" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Legend</text>
+
+  <rect x="970" y="65" width="15" height="10" fill="#e8f5e8" stroke="#4caf50"/>
+  <text x="995" y="75" font-family="Arial, sans-serif" font-size="11" fill="#333">Existing Prusa Infrastructure</text>
+
+  <rect x="970" y="85" width="15" height="10" fill="#e3f2fd" stroke="#2196f3"/>
+  <text x="995" y="95" font-family="Arial, sans-serif" font-size="11" fill="#333">Existing Factbird Infrastructure</text>
+
+  <rect x="970" y="105" width="15" height="10" fill="#f5f5f5" stroke="#757575" stroke-dasharray="3,3"/>
+  <text x="995" y="115" font-family="Arial, sans-serif" font-size="11" fill="#333">On-Premise</text>
+
+  <text x="100" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Option 2: EDGE Computing</text>
+
+  <!-- Unknowns box -->
+  <rect x="530" y="650" width="200" height="120" rx="5" fill="#fff" stroke="#666" stroke-width="1"/>
+  <text x="630" y="675" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Unknowns</text>
+  <text x="630" y="695" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">• None</text>
+
+
+  <!-- Benefits box -->
+  <rect x="300" y="650" width="200" height="120" rx="5" fill="#fff" stroke="#666" stroke-width="1"/>
+  <text x="400" y="675" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Benefits</text>
+  <text x="400" y="695" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">• No custom development</text>
+  <text x="400" y="715" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">• Independent systems</text>
+  <text x="400" y="735" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">• Local redundancy</text>
+  <text x="400" y="755" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">• Reuses existing camera</text>
+
+  <!-- Downsides box -->
+  <rect x="70" y="650" width="200" height="120" rx="5" fill="#fff" stroke="#666" stroke-width="1"/>
+  <text x="170" y="675" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Downsides</text>
+  <text x="170" y="695" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">• Additional hardware</text>
+  <text x="170" y="715" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">• On-site deployment</text>
+  <text x="170" y="735" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">• Maintenance overhead</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowgreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4caf50"/>
+    </marker>
+    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2196f3"/>
+    </marker>
+    <marker id="arrowpurple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#9c27b0"/>
+    </marker>
+  </defs>
+</svg>

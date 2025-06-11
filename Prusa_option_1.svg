@@ -1,0 +1,131 @@
+<svg viewBox="0 0 800 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="1000" fill="#f8f9fa"/>
+
+  <!-- On-Premise section -->
+  <rect x="50" y="50" width="700" height="150" rx="10" fill="#f5f5f5" stroke="#757575" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="400" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#757575">On-Premise</text>
+
+  <!-- Device section -->
+  <rect x="300" y="90" width="200" height="100" rx="8" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+  <text x="400" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4caf50">3D Printer</text>
+  <text x="400" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">EXISTING</text>
+
+  <!-- Cloud A - Prusa -->
+  <rect x="50" y="220" width="700" height="280" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="150" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1976d2">Prusa Cloud</text>
+
+  <!-- Prusa Components -->
+  <!-- PrusaConnect -->
+  <rect x="120" y="270" width="380" height="180" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+  <text x="210" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9c27b0">Prusa Applications</text>
+  <text x="210" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9c27b0">PrusaConnect</text>
+  <text x="210" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">EXISTING</text>
+
+  <!-- Bridge Component - HIGHLIGHTED -->
+  <rect x="300" y="380" width="170" height="50" rx="5" fill="#fff8e1" stroke="#ff9800" stroke-width="4" stroke-dasharray="5,5"/>
+  <text x="380" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ff9800">MQTT Integration</text>
+  <text x="380" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">CUSTOM DEVELOPMENT</text>
+
+  <!-- Cloud B - Factbird -->
+  <rect x="50" y="540" width="700" height="290" rx="10" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="400" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#7b1fa2">Factbird (AWS)</text>
+
+  <!-- Factbird Components -->
+  <!-- KVS Storage -->
+  <rect x="100" y="600" width="180" height="80" rx="5" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="190" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1976d2">KVS Storage</text>
+  <text x="190" y="645" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1976d2">Video Storage</text>
+  <text x="190" y="665" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">EXISTING</text>
+
+  <!-- Image to Video -->
+  <rect x="320" y="600" width="180" height="80" rx="5" fill="#fff8e1" stroke="#ff9800" stroke-width="4" stroke-dasharray="5,5"/>
+  <text x="410" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ff9800">Images to Video</text>
+  <text x="410" y="645" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ff9800">Video Storage</text>
+  <text x="410" y="665" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">CUSTOM DEVELOPMENT</text>
+
+
+  <!-- AWS IoT Core Factbird -->
+  <rect x="550" y="600" width="180" height="80" rx="5" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <text x="640" y="625" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1976d2">AWS IoT Core</text>
+  <text x="640" y="645" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1976d2">MQTT Broker</text>
+  <text x="640" y="665" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">EXISTING</text>
+
+  <!-- Factbird Applications -->
+  <rect x="250" y="730" width="300" height="80" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+  <text x="400" y="755" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9c27b0">Factbird Applications</text>
+  <text x="400" y="775" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#9c27b0">Video Analytics + MQTT Processing</text>
+  <text x="400" y="795" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">EXISTING</text>
+
+  <!-- Connection Lines -->
+  <!-- Printer to Prusa WebRTC -->
+  <path d="M 380 190 Q 300 230 210 270" stroke="#4caf50" stroke-width="3" fill="none" marker-end="url(#arrowgreen)"/>
+  <text x="300" y="245" font-family="Arial, sans-serif" font-size="11" fill="#4caf50" font-weight="bold">Images + Data (PrusaConnect)</text>
+
+  <!-- Bridge to Factbird KVS -->
+  <path d="M 330 600 Q 280 540 210 600" stroke="#1976d2" stroke-width="4" fill="none" marker-end="url(#arrowblue)"/>
+  <text x="220" y="560" font-family="Arial, sans-serif" font-size="11" fill="#1976d2" font-weight="bold">Video Stream</text>
+
+  <!-- MQTT to Bridge -->
+  <path d="M 590 600 Q 530 540 460 600" stroke="#1976d2" stroke-width="4" fill="none" marker-end="url(#arrowblue)"/>
+  <text x="500" y="560" font-family="Arial, sans-serif" font-size="11" fill="#1976d2" font-weight="bold">Images</text>
+
+  <!-- Bridge to Factbird MQTT -->
+  <path d="M 450 430 Q 600 540 670 600" stroke="#1976d2" stroke-width="4" fill="none" marker-end="url(#arrowblue)"/>
+  <text x="615" y="530" font-family="Arial, sans-serif" font-size="11" fill="#1976d2" font-weight="bold">MQTT Forward</text>
+
+  <!-- Factbird Storage to Apps -->
+  <path d="M 210 680 Q 280 700 320 730" stroke="#9c27b0" stroke-width="3" fill="none" marker-end="url(#arrowpurple)"/>
+
+  <!-- Factbird MQTT to Apps -->
+  <path d="M 590 680 Q 520 700 480 730" stroke="#9c27b0" stroke-width="3" fill="none" marker-end="url(#arrowpurple)"/>
+
+  <rect x="580" y="30" width="210" height="120" rx="5" fill="#fff" stroke="#666" stroke-width="1"/>
+  <text x="665" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Legend</text>
+
+  <rect x="600" y="65" width="15" height="10" fill="#e8f5e8" stroke="#4caf50"/>
+  <text x="625" y="75" font-family="Arial, sans-serif" font-size="11" fill="#333">Existing Prusa Infrastructure</text>
+
+  <rect x="600" y="85" width="15" height="10" fill="#e3f2fd" stroke="#1976d2"/>
+  <text x="625" y="95" font-family="Arial, sans-serif" font-size="11" fill="#333">Existing Factbird Infrastructure</text>
+
+  <rect x="600" y="105" width="15" height="10" fill="#fff8e1" stroke="#ff9800" stroke-dasharray="2,2"/>
+  <text x="625" y="115" font-family="Arial, sans-serif" font-size="11" fill="#333">Custom Development</text>
+
+  <rect x="600" y="125" width="15" height="10" fill="#f5f5f5" stroke="#757575" stroke-dasharray="3,3"/>
+  <text x="625" y="135" font-family="Arial, sans-serif" font-size="11" fill="#333">On-Premise</text>
+
+  <text x="100" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Option 1: Cloud Computing</text>
+
+   <!-- Unknowns box -->
+  <rect x="530" y="820" width="200" height="120" rx="5" fill="#fff" stroke="#666" stroke-width="1"/>
+  <text x="630" y="845" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Unknowns</text>
+  <text x="630" y="865" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">• Development effort</text>
+
+  <!-- Benefits box -->
+  <rect x="300" y="820" width="200" height="120" rx="5" fill="#fff" stroke="#666" stroke-width="1"/>
+  <text x="400" y="845" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Benefits</text>
+  <text x="400" y="865" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">• No additional hardware</text>
+  <text x="400" y="885" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">• Cloud-based solution</text>
+
+  <!-- Downsides box -->
+  <rect x="70" y="820" width="200" height="120" rx="5" fill="#fff" stroke="#666" stroke-width="1"/>
+  <text x="170" y="845" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Downsides</text>
+  <text x="170" y="865" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">• Custom development</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowgreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4caf50"/>
+    </marker>
+    <marker id="arroworange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ff9800"/>
+    </marker>
+    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2196f3"/>
+    </marker>
+    <marker id="arrowpurple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#9c27b0"/>
+    </marker>
+  </defs>
+</svg>
